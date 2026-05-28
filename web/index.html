@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="earlybird">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>talkiepods</title>
+  <link rel="manifest" href="manifest.json">
+
+  <!-- vConsole for mobile debugging -->
+  <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
+
+  <script>
+    // WebView JavaScript Bridge 初始化函数
+    // 用于确保在 WebView 环境中桥接就绪后再执行回调
+    (function() {
+      // 如果已经存在，直接返回
+      if (window.setupWebViewJavascriptBridge) return;
+
+      window.setupWebViewJavascriptBridge = function(callback) {
+        // 如果桥已经存在，立即执行回调
+        if (window.WebViewJavascriptBridge) {
+          return callback(window.WebViewJavascriptBridge);
+        }
+
+        // 如果桥还没注入，把回调暂存起来
+        if (window.WVJBCallbacks) {
+          return window.WVJBCallbacks.push(callback);
+        }
+
+        // 初始化回调数组
+        window.WVJBCallbacks = [callback];
+
+        // 通过加载特殊 scheme 来触发 iOS 端注入桥
+        var bridgeIframe = document.createElement('iframe');
+        bridgeIframe.style.display = 'none';
+        bridgeIframe.src = 'wvjbscheme://__BRIDGE_LOADED__';
+        document.documentElement.appendChild(bridgeIframe);
+
+        // 立即移除 iframe，避免影响页面
+        setTimeout(function() {
+          document.documentElement.removeChild(bridgeIframe);
+        }, 0);
+      };
+
+      // 监听桥就绪事件（某些 Android 桥会触发这个事件）
+      document.addEventListener('WebViewJavascriptBridgeReady', function() {
+        if (window.WVJBCallbacks && window.WebViewJavascriptBridge) {
+          var callbacks = window.WVJBCallbacks.slice(0);
+          window.WVJBCallbacks.length = 0;
+          callbacks.forEach(function(cb) {
+            try {
+              cb(window.WebViewJavascriptBridge);
+            } catch (e) {
+              console.warn('Bridge callback error:', e);
+            }
+          });
+        }
+      }, false);
+    })();
+
+    // vConsole 初始化函数
+    // 由 Flutter 端调用，传入 isTestMode 参数
+    window.initVConsole = function(isTestMode) {
+      if (isTestMode && typeof VConsole !== 'undefined') {
+        // 初始化 vConsole
+        window.vConsole = new VConsole();
+        console.log('[vConsole] Enabled in test mode');
+      } else {
+        console.log('[vConsole] Disabled (isTestMode=' + isTestMode + ')');
+      }
+    };
+  </script>
+</head>
+<body>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

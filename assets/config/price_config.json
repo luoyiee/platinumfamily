@@ -1,0 +1,151 @@
+{
+  "planOthers": {
+    "promoType": "tieredPricing",
+    "onePlatinumPrice": "$109.99",
+    "introPrice": "$109.99",
+    "introOriginalPrice": "$149.99",
+    "talkiePods": [
+      {
+        "quantity": 1,
+        "finalPrice": "$0.00",
+        "originalPrice": "$40.00",
+        "couponId": "SAVE20",
+        "promoNextQty": 2,
+        "promoNextPrice": "$10.00",
+        "talkiePodsMemberSalePrice": "$109.99",
+        "talkiePodsMemberOriginalPrice": "$149.99"
+      },
+      {
+        "quantity": 2,
+        "finalPrice": "$10.00",
+        "originalPrice": "$80.00",
+        "couponId": "SAVE45",
+        "promoNextQty": 3,
+        "promoNextPrice": "$7.00",
+        "talkiePodsMemberSalePrice": "$119.99",
+        "talkiePodsMemberOriginalPrice": "$189.99"
+      },
+      {
+        "quantity": 3,
+        "finalPrice": "$17.00",
+        "originalPrice": "$120.00",
+        "couponId": "SAVE73",
+        "promoNextQty": 4,
+        "promoNextPrice": "$3.00",
+        "talkiePodsMemberSalePrice": "$126.99",
+        "talkiePodsMemberOriginalPrice": "$229.99"
+      },
+      {
+        "quantity": 4,
+        "finalPrice": "$20.00",
+        "originalPrice": "$160.00",
+        "couponId": "SAVE103",
+        "promoNextQty": 5,
+        "promoNextPrice": "$1.00",
+        "talkiePodsMemberSalePrice": "$129.99",
+        "talkiePodsMemberOriginalPrice": "$269.99"
+      },
+      {
+        "quantity": 5,
+        "finalPrice": "$21.00",
+        "originalPrice": "$200.00",
+        "couponId": "SAVE134",
+        "talkiePodsMemberSalePrice": "$130.99",
+        "talkiePodsMemberOriginalPrice": "$309.99"
+      }
+    ]
+  },
+  "planPremiumOrFamily": {
+    "promoType": "tieredPricing",
+    "onePlatinumPrice": "$109.99",
+    "introPrice": "$109.99",
+    "introOriginalPrice": "$149.99",
+    "talkiePods": [
+      {
+        "quantity": 1,
+        "finalPrice": "$0.00",
+        "originalPrice": "$40.00",
+        "couponId": "SAVE20",
+        "promoNextQty": 2,
+        "promoNextPrice": "$10.00",
+        "talkiePodsMemberSalePrice": "$109.99",
+        "talkiePodsMemberOriginalPrice": "$149.99"
+      },
+      {
+        "quantity": 2,
+        "finalPrice": "$10.00",
+        "originalPrice": "$80.00",
+        "couponId": "SAVE45",
+        "promoNextQty": 3,
+        "promoNextPrice": "$7.00",
+        "talkiePodsMemberSalePrice": "$119.99",
+        "talkiePodsMemberOriginalPrice": "$189.99"
+      },
+      {
+        "quantity": 3,
+        "finalPrice": "$17.00",
+        "originalPrice": "$120.00",
+        "couponId": "SAVE73",
+        "promoNextQty": 4,
+        "promoNextPrice": "$3.00",
+        "talkiePodsMemberSalePrice": "$126.99",
+        "talkiePodsMemberOriginalPrice": "$229.99"
+      },
+      {
+        "quantity": 4,
+        "finalPrice": "$20.00",
+        "originalPrice": "$160.00",
+        "couponId": "SAVE103",
+        "promoNextQty": 5,
+        "promoNextPrice": "$1.00",
+        "talkiePodsMemberSalePrice": "$129.99",
+        "talkiePodsMemberOriginalPrice": "$269.99"
+      },
+      {
+        "quantity": 5,
+        "finalPrice": "$21.00",
+        "originalPrice": "$200.00",
+        "couponId": "SAVE134",
+        "talkiePodsMemberSalePrice": "$130.99",
+        "talkiePodsMemberOriginalPrice": "$309.99"
+      }
+    ]
+  },
+  "planPlatinumFamily": {
+    "promoType": "fixedDiscount",
+    "introPrice": "$29.99",
+    "introOriginalPrice": "$40.00",
+    "talkiePods": [
+      {
+        "quantity": 1,
+        "finalPrice": "$29.99",
+        "originalPrice": "$40.00",
+        "couponId": "DISCOUNT25_03"
+      },
+      {
+        "quantity": 2,
+        "finalPrice": "$59.98",
+        "originalPrice": "$80.00",
+        "couponId": "DISCOUNT25_03"
+      },
+      {
+        "quantity": 3,
+        "finalPrice": "$89.96",
+        "originalPrice": "$120.00",
+        "couponId": "DISCOUNT25_03"
+      },
+      {
+        "quantity": 4,
+        "finalPrice": "$119.95",
+        "originalPrice": "$160.00",
+        "couponId": "DISCOUNT25_03"
+      },
+      {
+        "quantity": 5,
+        "finalPrice": "$149.94",
+        "originalPrice": "$200.00",
+        "couponId": "DISCOUNT25_03"
+      }
+    ]
+  }
+}
